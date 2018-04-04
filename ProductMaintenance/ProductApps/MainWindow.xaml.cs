@@ -33,12 +33,18 @@ namespace ProductApps
             {
                 cProduct = new Product(Convert.ToDecimal(priceTextBox.Text), Convert.ToInt16(quantityTextBox.Text));
                 cProduct.calTotalPayment();
+                cProduct.calDelivery();
+                cProduct.calWrapping();
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
+                totalChargeDeliveryTextBlock.Text = Convert.ToString(cProduct.Delivery);
+                totalChargeWrapTextBlock.Text = Convert.ToString(cProduct.Wrapping);
             }
             catch (FormatException)
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
+
+
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
