@@ -59,7 +59,7 @@ namespace ProductApps
             Price = price;
             Quantity = quantity;
             Delivery = delivery;
-            //Wrapping = wrapping;
+            Wrapping = wrapping;
         }
 
         //Calculate the total payment
@@ -72,9 +72,9 @@ namespace ProductApps
         {
             Delivery = TotalPayment + delivery;
         }
-        //public void calWrapping()
-        //{
-          //  Wrapping =  Delivery + wrapping;
-        //}
+        public void calWrapping()
+        {
+            Wrapping =  Delivery + wrapping;
+        }
     }
 }
